@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Referencia a pasta CSS -->
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+        
+        <title>Cadastro</title>
+
+    </head>
+
+    <body>
+            <div class="container-cadastro">
+                <div class="cadastro-form">
+                    <form>
+                        <span class="login-form-title">
+                            Faça o Cadastro 
+                        </span>
+                        
+                        <div >
+                            Nome <input type="text" name="nome" style="width: 100%;"> <br>
+                            Email <input type="text" name="email" style="width: 100%;"> <br>
+                            Password <input type="password" name="password" style="width: 100%;"> 
+                        </div>
+                        <br>
+                        <div style="line-height: 2.6; font-size: 14px;">                        
+                            Já possui uma conta?
+                            <a href="login.html">Login<a>
+                        </div>
+
+                        <button type="submit" onclick="cadastrar(); return false" class="button_login">CADASTRAR</button>
+                    </form>
+                </div>
+                
+            </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <title>Teste de Conexao com o MySQL</title>
+
+  </head>
+  <body>
+    <h1>Conexao MySQL</h1>
+    <input type="button" value="test connection" id="btn">
+
+    <script>
+      document.getElementById("btn").addEventListener("click", () => {
+        var mysql = require('mysql');
+
+        var connection = mysql.createConnection({
+        host     : 'localhost',
+        user     : 'root',
+        password : 'root',
+        database : 'electron_db'
+      });
+
+      connection.connect((err) => {
+        if(err){
+          return console.log(err.stack);
+        }
+
+        console.log("Conectado com sucesso!");
+
+      });
+      
+      connection.end(() => {
+        console.log("Conexao finalizada com sucesso!");
+      });
+
+      },false);
+
+    </script>
+  </body>
+</html>
