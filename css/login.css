@@ -1,0 +1,75 @@
+/*
+  Variáveis
+*/
+
+:root {
+    --vermelho: #d9042b;
+    --vinho: #93050d;
+    --azul-claro: #0848ac;
+    --azul: #033e8c;
+    --azul-escuro: #003383;
+    --azul-dark: #194073;
+    --amarelo-claro: #f2cb05;
+    --amarelo: #f2d06b;
+    --amarelo-escuro: #ffaa01;
+    --preto: #0d0d0d;
+  }
+
+/*
+  Formatacoes
+*/
+
+body {
+    font-family: Tahoma, sans-serif;
+}
+
+.login-form-title {
+    display: block;
+    font-weight: 600;
+    font-size: 39px;
+    color: var(--azul-escuro);
+    line-height: 1.8;
+    text-align: center;
+}
+
+.login-form {
+    width: 300px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #0848ac;
+}
+
+.container-login {
+  background: #a5c5f8;
+  width: 308px; 
+  height: 250px;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 200px auto;
+}
+
+.button_login{
+  width: 100%; 
+  background-color: #0848ac;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px;
+  color: white;
+
+}
+
+.container-cadastro {
+  background: #a5c5f8;
+  width: 457px; 
+  height: 530px;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 170px auto;
+}
+
+.cadastro-form {
+  width: 450px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0848ac;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Referencia a pasta CSS -->
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+        
+        <title>Cadastro</title>
+
+    </head>
+
+    <body>
+            <div class="container-cadastro">
+                <div class="cadastro-form">
+                    <form>
+                        <span class="login-form-title">
+                            Faça o Cadastro 
+                        </span>
+                        
+                        <div >
+                            Nome <input type="text" name="nome" style="width: 100%;"> <br>
+                            Email <input type="text" name="email" style="width: 100%;"> <br>
+                            Password <input type="password" name="password" style="width: 100%;">
+                            Endereço <input type="text" name="endereco" style="width: 100%;"> <br>
+                            CEP <input type="text" name="cep" style="width: 100%;" onblur="preencherEndereco(this.value);"> <br>
+                            Bairro <input type="text" name="bairro" style="width: 100%;" readonly> <br>
+                            Cidade <input type="text" name="cidade" style="width: 100%;" readonly> <br>
+                            Estado <input type="text" name="estado" style="width: 100%;" readonly>
+                        </div>
+                        <br>
+                        <div style="line-height: 2.6; font-size: 14px;">                        
+                            Já possui uma conta?
+                            <a href="login.html">Login<a>
+                        </div>
+
+                        <button type="submit" onclick="cadastrar(); return false" class="button_login" href="pagina.html">CADASTRAR</button>
+                    </form>
+                </div>
+                
+            </div>
+            <script src="renderer.js"></script>
+    </body>
+
+</html>
