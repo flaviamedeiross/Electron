@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Referencia a pasta CSS -->
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+         <title>Pagina inicial</title>
+
+    </head>
+    <body>        
+        <h2>Dados do Cadastro</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">NOME</th>
+                    <th scope="col">E-MAIL</th>
+                    <th scope="col">ENDEREÇO</th>
+                    <th scope="col">CEP</th>
+                    <th scope="col">CIDADE</th>
+                    <th scope="col">ESTADO</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                @foreach($cadastros as $cadastro)
+                <tr>
+                    <td>{{ $cadastro->nome }}</td>
+                    <td>{{ $cadastro->email }}</td>
+                    <td>{{ $cadastro->endereco }}</td>
+                    <td>{{ $cadastro->cep }}</td>
+                    <td>{{ $cadastro->cidade }}</td>
+                    <td>{{ $cadastro->estado }}</td>
+                    <td>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <form action="/cadastro/gerenciar/{{ $cadastro->email }}" method="POST">
+                            @csrf
+                            @method("GERENCIAR")
+                            <button type="submit" class="btn btn-danger delete-btn">
+                                Gerenciar Cadastro
+                            </button>
+                        </form>
+                    </div>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+        <script src="renderer.js"></script>
+    </body>
+
+</html>
